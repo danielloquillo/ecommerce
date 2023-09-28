@@ -12,9 +12,13 @@ module.exports = {
     },
     screens: {
       sm: '640px',
+      sm: '576px',
       md: '768px',
+      md: '960px',
       lg: '1024px',
       xl: '1440px',
+      xl: '1280px',
+      
     },
     extend: {
       colors: {
@@ -22,7 +26,7 @@ module.exports = {
         secondary: '#F5E6E0',
       },
       backgroundImage: {
-        hero: "url('./img/bg_hero.svg')",
+        hero: "url('./img/1.png')",
       },
     },
   },
