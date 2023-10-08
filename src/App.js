@@ -15,6 +15,7 @@ import ProductDetails from './pages/ProductDetails';
 import Sidebar from './components/Sidebar';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import Login from './components/Login';
 
 
 const App = () => {
@@ -26,6 +27,7 @@ const App = () => {
         <Route path = '/'element = {<Home />} />
         <Route path = '/product/:id' element= 
         {<ProductDetails />} />
+        <Route path = '/Login' element = {<Login />} />
       </Routes>
       <Sidebar />
       <Footer />
