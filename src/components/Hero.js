@@ -23,11 +23,11 @@ const Hero = () => {
       <div className='flex flex-col justify-center'>
         {/* pretitle */}
         <div className='py-4 text-[25px] text-slate-400 text-left md:text-center font-ligh'>
-         ALL-NEW SEASONAL STYLES
+          YOUR STYLE - YOUR CHOICE
           </div>
           {/* title */}
           <h1 className='py-5 text-[90px] text-slate-400 leading-[1.1] font-light mb-4 text-left md:text-center'>
-            FALL 
+             
             2023 COLLECTION <br />
           </h1>
           <section className='text-center'>
