@@ -5,7 +5,11 @@ import { BsCart4 } from 'react-icons/bs';
 import { VscAccount } from 'react-icons/vsc';
 import { BsSearch } from 'react-icons/bs';
 import { HiOutlineHomeModern } from 'react-icons/hi2';
-import SearchSidebar from './SearchSidebar'; 
+import SearchSidebar from './SearchSidebar';
+import house from '../img/house.svg';
+import cart from '../img/cart.svg';
+import glass from '../img/glass.svg';
+import login from '../img/login.svg';
 
 const Header = () => {
   const [isActive, setIsActive] = useState(false);
@@ -33,32 +37,32 @@ const Header = () => {
 
         {/* Logo */}
         <Link to={'/'}>
-          <div>
-            <HiOutlineHomeModern className='flex text-3xl' />
+          <div className='flex justify-center items-center w-16 h-16'>
+          <img src={house} alt=''  className='w-full' />
           </div>
         </Link>
         {/* Cart */}
-        <div
+        
+        <div 
           onClick={() => setIsOpen(!isOpen)}
-          className='cursor-pointer flex relative'
+          className='flex justify-center items-center w-16 h-16'
         >
-          <BsCart4 className='text-3xl' />
+          <img src={cart} alt=''  className=' cursor-pointer w-full'/>
         </div>
 
   
 
 
         {/* search */}
-        <div>
-          <BsSearch
-            onClick={() => setSearchSidebarOpen(!searchSidebarOpen)}
-            className='cursor-pointer flex  text-3xl'
-          />
+        <div 
+        onClick={() => setSearchSidebarOpen(!searchSidebarOpen)}
+        className='flex justify-center items-center w-16 h-16'>
+        <img src={glass} alt='' className='cursor-pointer w-full'/>
         </div>
 
         {/* link to Login */}
-        <Link to={`/Login`} className=''>
-          <VscAccount className='cursor-pointer flex  text-3xl' />
+        <Link to={`/Login`} className='flex justify-center items-center w-16 h-16'>
+        <img src={login} alt=''  className='cursor-pointer w-full' />
         </Link>
       </div>
       

@@ -2,13 +2,17 @@ import React, { useContext } from 'react';
 import { ProductContext } from '../contexts/ProductContext';
 import Product from '../components/Product';
 import Hero from '../components/Hero';
-import {BsFillCaretLeftSquareFill, BsFillCaretRightSquareFill } from 'react-icons/bs'
-import { icons } from 'react-icons';
+import {FcPrevious, FcNext } from 'react-icons/fc';
+import womenslogo from '../img/womenslogo.png'
+import menslogo from '../img/menslogo.png'
+//import arrowleft from '../img/arrowleft.svg';
+//import house from '../img/arrow.svg';
+
 
 const Home = () => {
   const { products } = useContext(ProductContext);
 
-  // Filtrar productos por categoría
+  
   const womensProducts = products.filter((item) => item.category === "women's clothing");
   const mensProducts = products.filter((item) => item.category === "men's clothing");
 
@@ -44,10 +48,10 @@ const Home = () => {
           <div className="max-w-screen overflow-x-auto">
             <div className="mb-8">
               <div className="flex justify-center items-center mb-4">
-                <h2 className="text-2xl font-semibold">WOMEN'S BEST SELLERS</h2>
+              <img src={womenslogo} alt='' className="max-w-[700px] w-full"/>
               </div>
               <div className='relative flex items-center'>
-              <BsFillCaretLeftSquareFill onClick={slideWomenLeft} className='cursor-pointer text-7xl'/>
+              <FcPrevious onClick={slideWomenLeft} className='cursor-pointer text-9xl'/>
               <div id='Womenslider' className="py-9 flex flex-no-wrap    className='w-full overflow-x-scroll scroll whitespace-nowrap scroll-smooth">
                 {womensProducts.map((product) => (
                   <div className="mr-4" key={product.id}>
@@ -55,15 +59,15 @@ const Home = () => {
                   </div>
                 ))}
               </div>
-              <BsFillCaretRightSquareFill onClick={slideWomenRight} className='cursor-pointer text-7xl' />
+              <FcNext onClick={slideWomenRight} className='cursor-pointer text-9xl' />
             </div>
             </div>
           
               <div className="flex justify-center items-center mb-4">
-                <h2 className="text-2xl font-semibold">MEN'S BEST SELLERS</h2>
+              <img src={menslogo} alt='' className="max-w-[700px] w-full"/>
               </div>
               <div className='relative flex items-center'>
-              <BsFillCaretLeftSquareFill onClick={slideManLeft} className='cursor-pointer text-5xl'/>
+              <FcPrevious onClick={slideManLeft} className='cursor-pointer text-7xl'/>
               <div id= 'Manslider' className="py-9 flex flex-no-wrap   className='w-full overflow-x-scroll scroll whitespace-nowrap scroll-smooth">
                 {mensProducts.map((product) => (
                   <div className="mr-4" key={product.id}>
@@ -72,7 +76,7 @@ const Home = () => {
                   
                 ))}
               </div>
-              <BsFillCaretRightSquareFill onClick={slideManRight} className='cursor-pointer text-5xl' />
+              <FcNext onClick={slideManRight} className='cursor-pointer text-7xl' />
             </div>
           </div>
         </div>

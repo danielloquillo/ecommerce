@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll';
-
+import sale from '../img/sale.svg'
 
 const Hero = () => {
   
@@ -22,12 +22,13 @@ const Hero = () => {
       {/* text */}
       <div className='flex flex-col justify-center'>
         {/* pretitle */}
-        <div className='py-4 text-[25px] text-white text-left md:text-center font-ligh'>
+        <div className='py-4 text-[25px] text-slate-400 text-left md:text-center font-ligh'>
          ALL-NEW SEASONAL STYLES
           </div>
           {/* title */}
-          <h1 className='py-5 text-[90px] leading-[1.1] font-light mb-4 text-left md:text-center'>
-            FALL 2023 COLLECTION <br />
+          <h1 className='py-5 text-[90px] text-slate-400 leading-[1.1] font-light mb-4 text-left md:text-center'>
+            FALL 
+            2023 COLLECTION <br />
           </h1>
           <section className='text-center'>
 
@@ -47,9 +48,9 @@ const Hero = () => {
           
          
               
-              className='text-center w-[180px] bg-primary py-4 px-8 text-white '
+              
             >
-              SHOP NOW 
+              <img className='text-center w-[180px] py-2 px-7' src={sale} alt='' />
             </button> 
             </ScrollLink>
             

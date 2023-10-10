@@ -7,6 +7,7 @@ import { CartContext } from '../contexts/CartContext';
 import { ProductContext } from '../contexts/ProductContext';
 
 import { MdShoppingCart } from "react-icons/md";
+import shop from "../img/shop.svg";
 
 const ProductDetails = () => {
   // get the product id from the url
@@ -52,7 +53,7 @@ const ProductDetails = () => {
               onClick={() => addToCart(product, product.id)}>
               <div className='flex justify-center items-center w-19 h-19'
             >
-              <MdShoppingCart className='text-6xl' />
+              <img src={shop} alt='' className='max-w-[200px] w-full'  />
               </div>
             </button>
           </div>
