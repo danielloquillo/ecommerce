@@ -38,12 +38,12 @@ const Product = ({ product }) => {
         </div>
       </div>
       {/* category & title & price */}
-      <div className='text-slate-400'>
+      <div>
 
         <Link to={`/product/${id}`}>
-          <h2 className='py-5 text-[13px] font-semibold flex items-center uppercase'>{title}</h2>
+          <h2 className='text-slate-400 py-5 text-[13px] font-semibold flex items-center uppercase'>{title}</h2>
         </Link>
-        <div className='text-[15px] font-light flex items-center uppercase'>$ {price}</div>
+        <div className='text-slate-400 text-[15px] font-light flex items-center uppercase'>$ {price}</div>
       </div>
     </div>
   );
